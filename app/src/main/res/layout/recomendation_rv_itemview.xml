@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="185dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+
+    android:background="@drawable/ripple_bg_selector"
+    app:cardUseCompatPadding="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/catImage01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/semiwhite"
+            android:scaleType="centerCrop"
+            android:src="@drawable/recomendation_3"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/semiblack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        <TextView
+            android:id="@+id/catName01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opebsans_medium"
+
+            android:padding="10dp"
+            android:text="Harlem Shake"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/batch"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="10dp"
+                app:layout_constraintTop_toTopOf="@id/catName01"
+                app:layout_constraintBottom_toBottomOf="@id/catName01"
+                />
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opebsans_medium"
+
+                android:padding="10dp"
+                android:text="4.5"
+                android:textColor="@color/white"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/star"
+                app:layout_constraintTop_toBottomOf="@id/catName01"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/view"
+                app:layout_constraintTop_toTopOf="@id/rating"
+                app:layout_constraintBottom_toBottomOf="@id/rating"
+                app:layout_constraintStart_toEndOf="@id/rating"
+                />
+            <TextView
+                android:id="@+id/place_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opebsans_medium"
+
+                android:padding="10dp"
+                android:text="Resturants"
+                android:textColor="@color/white"
+
+                app:layout_constraintTop_toTopOf="@id/view"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintStart_toEndOf="@id/view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

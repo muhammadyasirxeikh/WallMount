@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/passwordFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.app.wallmount.controller.fragment.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.wallmount.controller.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recomendationsFragment"
+            app:destination="@id/recomendationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_propertyFragment"
+            app:destination="@id/propertyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_localAttarctions"
+            app:destination="@id/localAttarctions" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapsAndNearBy"
+            app:destination="@id/mapsAndNearBy" />
+        <action
+            android:id="@+id/action_homeFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_forOurGuestRecyclerFragment"
+            app:destination="@id/forOurGuestRecyclerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_resturantDetailsFragment"
+            app:destination="@id/resturantDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recomendationsFragment"
+        android:name="com.app.wallmount.controller.fragment.recomendationFragment.RecomendationsFragment"
+        android:label="fragment_recomendations"
+        tools:layout="@layout/fragment_recomendations" >
+        <action
+            android:id="@+id/action_recomendationsFragment_to_resturantDetailsFragment"
+            app:destination="@id/resturantDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyFragment"
+        android:name="com.app.wallmount.controller.fragment.property.PropertyFragment"
+        android:label="fragment_property"
+        tools:layout="@layout/fragment_property" >
+        <action
+            android:id="@+id/action_propertyFragment_to_localAttarctions"
+            app:destination="@id/localAttarctions"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/propertyFragment"
+            />
+        <action
+            android:id="@+id/action_propertyFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/propertyFragment"/>
+        <action
+            android:id="@+id/action_propertyFragment_to_mapsAndNearBy"
+            app:destination="@id/mapsAndNearBy"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/propertyFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/localAttarctions"
+        android:name="com.app.wallmount.controller.fragment.localAttractions.LocalAttarctions"
+        android:label="fragment_local_attarctions"
+        tools:layout="@layout/fragment_local_attarctions" >
+        <action
+            android:id="@+id/action_localAttarctions_to_servicesFragment"
+            app:destination="@id/servicesFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/localAttarctions"/>
+        <action
+            android:id="@+id/action_localAttarctions_to_mapsAndNearBy"
+            app:destination="@id/mapsAndNearBy"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/localAttarctions"/>
+        <action
+            android:id="@+id/action_localAttarctions_to_propertyFragment"
+            app:destination="@id/propertyFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/localAttarctions"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mapsAndNearBy"
+        android:name="com.app.wallmount.controller.fragment.mapsAndNearBy.MapsAndNearBy"
+        android:label="fragment_maps_and_near_by"
+        tools:layout="@layout/fragment_maps_and_near_by" >
+        <action
+            android:id="@+id/action_mapsAndNearBy_to_servicesFragment"
+            app:destination="@id/servicesFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/mapsAndNearBy"/>
+        <action
+            android:id="@+id/action_mapsAndNearBy_to_localAttarctions"
+            app:destination="@id/localAttarctions"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/mapsAndNearBy"/>
+        <action
+            android:id="@+id/action_mapsAndNearBy_to_propertyFragment"
+            app:destination="@id/propertyFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/mapsAndNearBy"/>
+    </fragment>
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.app.wallmount.controller.fragment.Services.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_servicesFragment_to_mapsAndNearBy"
+            app:destination="@id/mapsAndNearBy"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/servicesFragment"/>
+        <action
+            android:id="@+id/action_servicesFragment_to_localAttarctions"
+            app:destination="@id/localAttarctions"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/servicesFragment"/>
+        <action
+            android:id="@+id/action_servicesFragment_to_propertyFragment"
+            app:destination="@id/propertyFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/servicesFragment"/>
+        <action
+            android:id="@+id/action_servicesFragment_to_serviceDetailFragment"
+            app:destination="@id/serviceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceDetailFragment"
+        android:name="com.app.wallmount.controller.fragment.Services.response.ServiceDetailFragment"
+        android:label="fragment_for_our_guest_detail"
+        tools:layout="@layout/fragment_for_our_guest_detail" />
+    <fragment
+        android:id="@+id/forOurGuestRecyclerFragment"
+        android:name="com.app.wallmount.controller.fragment.forOurGuest.ForOurGuestRecyclerFragment"
+        android:label="fragment_for_our_guest_recycler"
+        tools:layout="@layout/fragment_for_our_guest_recycler" >
+        <action
+            android:id="@+id/action_forOurGuestRecyclerFragment_to_forOurGuestDetailFragment"
+            app:destination="@id/forOurGuestDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forOurGuestDetailFragment"
+        android:name="com.app.wallmount.controller.fragment.forOurGuestDetails.ForOurGuestDetailFragment"
+        android:label="ForOurGuestDetailFragment" />
+    <fragment
+        android:id="@+id/resturantDetailsFragment"
+        android:name="com.app.wallmount.controller.fragment.resturantDetails.ResturantDetailsFragment"
+        android:label="ResturantDetailsFragment" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.app.wallmount.controller.fragment.password.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_passwordFragment_to_propertySelectFragment"
+            app:destination="@id/propertySelectFragment"
+            app:popUpTo="@id/passwordFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/propertySelectFragment"
+        android:name="com.app.wallmount.controller.fragment.propertySelect.PropertySelectFragment"
+        android:label="fragment_property_select"
+        tools:layout="@layout/fragment_property_select" >
+        <action
+            android:id="@+id/action_propertySelectFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.app.wallmount.controller.fragment.faq.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opebsans_semibold"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Is the neighborhood safe and convenient for sightseeing and exploring nearby attractions?"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opebsans_regular"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        android:text="Is the neighborhood safe and convenient for sightseeing and exploring nearby attractions?"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".controller.fragment.HomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:id="@+id/password_layout"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wifi"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wifi: Brooklynslopes"
+            android:fontFamily="@font/opebsans_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/wifi_name"
+            />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password: 1259Brookyln"
+            android:fontFamily="@font/opebsans_semibold"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/wifi_password"
+            />
+
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/password_layout"
+            android:text="Welcome To"
+            android:fontFamily="@font/opebsans_semibold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/welcome_tv"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/welcome_tv"
+            android:text="BROOKLYN SLPOES"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opensans_condensed_bold"
+            android:id="@+id/property_name"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:id="@+id/address_layout"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/property_name"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="479 4th Ave, Brooklyn, NY 11215"
+                android:fontFamily="@font/opebsans_semibold"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:padding="5dp"
+
+                android:id="@+id/property_address"
+                />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:background="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Your reservation  02 APR - 04 APR"
+                android:fontFamily="@font/opebsans_semibold"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/reservation_tv"
+                />
+
+
+        </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/wether_date_alyout"
+                android:background="#19000000"
+                app:layout_constraintTop_toBottomOf="@id/address_layout"
+                app:layout_constraintBottom_toBottomOf="@id/weather_rv"
+                android:padding="5dp"
+                android:layout_marginTop="8dp"
+                >
+
+
+
+
+
+                <TextView
+                    android:id="@+id/tvDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/opebsans_semibold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:fontFamily="@font/opebsans_semibold"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvDay"
+                   app:layout_constraintTop_toBottomOf="@id/tvDay"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/black"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            app:layout_constraintStart_toEndOf="@id/wether_date_alyout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/address_layout"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#19000000"
+            android:scrollbars="none"
+            android:id="@+id/weather_rv"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/weather_rv"
+            android:text="FOR OUR GUEST"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opebsans_bold"
+            android:id="@+id/for_our_guest_tv"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/for_our_guest_rv"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/for_our_guest_tv"
+            android:scrollbars="none"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/for_our_guest_rv"
+            android:text="Our Recomendations"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opebsans_bold"
+            android:id="@+id/our_recomendation_tv"
+            />
+        <TextView
+            android:id="@+id/viewAll_recomendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/our_recomendation_tv"
+            app:layout_constraintBottom_toBottomOf="@id/our_recomendation_tv"
+            android:text="View all"
+
+            android:textColor="@color/text_green"
+
+
+            android:fontFamily="@font/opebsans_bold"
+            android:padding="5dp"
+
+            android:textSize="14sp"
+            android:layout_marginEnd="20dp"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/move_forward"
+            app:layout_constraintTop_toTopOf="@id/viewAll_recomendation"
+            app:layout_constraintBottom_toBottomOf="@id/viewAll_recomendation"
+            app:layout_constraintStart_toEndOf="@id/viewAll_recomendation"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recomendation_rv"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/our_recomendation_tv"
+            android:scrollbars="none"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/recomendation_rv"
+            android:text="Things to Know"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opebsans_bold"
+            android:id="@+id/thing_to_know_tv"
+            />
+        <TextView
+            android:id="@+id/viewAll_things"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/thing_to_know_tv"
+            app:layout_constraintBottom_toBottomOf="@id/thing_to_know_tv"
+            android:text="View all"
+            android:textColor="@color/text_green"
+            android:fontFamily="@font/opebsans_bold"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginEnd="20dp"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/move_forward"
+            app:layout_constraintTop_toTopOf="@id/viewAll_things"
+            app:layout_constraintBottom_toBottomOf="@id/viewAll_things"
+            app:layout_constraintStart_toEndOf="@id/viewAll_things"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/things_to_know_rv"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/thing_to_know_tv"
+            android:scrollbars="none"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        android:id="@+id/bottom_bar_layout"
+        android:weightSum="4"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/property"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/property_icon"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Property"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/opebsans_regular"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/local_attraction"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/local_attraction"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Local Attractions"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/opebsans_regular"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/maps"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/maps_icon"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Maps and NearBy"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/opebsans_regular"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/services"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/services_icon"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Services"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/opebsans_regular"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

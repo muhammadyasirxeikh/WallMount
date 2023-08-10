@@ -1,0 +1,56 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:id="@+id/image_slide_cv"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ripple_bg_selector"
+        app:cardUseCompatPadding="true"
+        >
+    <ImageView
+        android:id="@+id/property_imageView"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+
+
+        android:src="@drawable/property_1"
+        android:scaleType="fitXY"
+        android:background="@drawable/round_background"
+
+        />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/property_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Text"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opebsans_regular"
+        app:layout_constraintStart_toEndOf="@id/image_slide_cv"
+        app:layout_constraintTop_toTopOf="@id/image_slide_cv"
+        app:layout_constraintBottom_toBottomOf="@id/image_slide_cv"
+        android:layout_marginStart="8dp"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_slide_cv"
+        app:layout_constraintBottom_toBottomOf="@id/image_slide_cv"
+        android:layout_marginEnd="8dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

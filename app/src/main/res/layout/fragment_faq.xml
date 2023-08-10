@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".controller.fragment.faq.FaqFragment">
+
+    <TextView
+        android:id="@+id/faqs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opebsans_bold"
+        android:gravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="FAQ's"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+         />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/faq_recycler"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/faqs"
+        app:layout_constraintBottom_toTopOf="@id/contact_host_layout"
+        android:scrollbars="none"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#1A2D927E"
+        android:id="@+id/contact_host_layout"
+        >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/con_icon"
+            android:id="@+id/con_icon"
+            />
+
+        <TextView
+            android:id="@+id/still_have_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opebsans_semibold"
+            android:gravity="start"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/con_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Still Have Questions?"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/still_have_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opebsans_regular"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/still_have_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Can’t find the answer you’re looking for? Please contact the host."
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/contact_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opebsans_semibold"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/still_have_tv2"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/solidgreenbackground"
+            android:text="Contact Host"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:textSize="17sp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
